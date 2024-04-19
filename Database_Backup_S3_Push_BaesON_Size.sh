@@ -51,8 +51,8 @@ get_db_size() {
 
 # Function to take backup
 take_backup() {
-    local backup_file="$BACKUP_DIR/$DB_NAME-$CURRENT_DATE-$CURRENT_TIME.sql.gz"
-    mysqldump -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" | gzip > "$backup_file"
+    local backup_file="$BACKUP_DIR/$DB_NAME-$CURRENT_DATE-$CURRENT_TIME.sql"
+    mysqldump -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" | "$backup_file"
     echo "Backup taken: $backup_file"
 }
 
