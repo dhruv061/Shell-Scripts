@@ -9,15 +9,17 @@ This is normal backup scripts that take backup based on file size. Suppose scrip
 ## Backup_Normal.sh
 This is script is for normal backup, when it runs that time it's create one backup of source file and store it. If you run again this script then it will take backup again of that source files.
 
-## Database_Backup_S3_Push.sh
+## Database_Backup_S3_Push_script-1.sh & Database_Backup_S3_Push_script-2.sh
 This script create backup every time when it's run for mysql databse that created in local host and dumped database in localhost.If you run this script inside EC2 then make sure you have install aws cli in EC2 (not configure only install) & crate one IAM role of S3 full access and attch to that EC2.
+
+## Site_Backup.sh
+Take your site backup and store it on S3.
 
 ## Database_Backup_S3_Push_BaesON_Size.sh
 This script create backup only when databse size is incease of previous store stored database backup. It take backup of Mysql databse that is created and dumped filed in localhost. If you run this script inside EC2 then make sure you have install aws cli in EC2 (not configure only install) & crate one IAM role of S3 full access and attch to that EC2.
 
 ## File_Type_Based_forward.sh
 This script move source file in specific folder based on file extension. Suppose source filder get one file of PDF extension then it move to the PDF folder. 
-
 
 ## Service_Restart.sh
 This script just check any service running on server and if it's stop then it will be restarted automatically when this scripts runs.
