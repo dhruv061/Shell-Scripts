@@ -24,4 +24,6 @@ This script move source file in specific folder based on file extension. Suppose
 ## Service_Restart.sh
 This script just check any service running on server and if it's stop then it will be restarted automatically when this scripts runs.
 
+## ec2_detail.sh
+Show all running ec2 info like key, public ip, private ip etc. make sure aws configure before run this script.
 
