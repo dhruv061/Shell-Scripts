@@ -27,3 +27,5 @@ This script just check any service running on server and if it's stop then it wi
 ## ec2_detail.sh
 Show all running ec2 info like key, public ip, private ip etc. make sure aws configure before run this script.
 
+## sftp_user_creation.sh
+SFTP User creation script.
