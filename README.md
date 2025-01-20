@@ -12,6 +12,18 @@ This is script is for normal backup, when it runs that time it's create one back
 ## Mysql_Database_Backup_S3_Push_script-1.sh & Mysql_Database_Backup_S3_Push_script-2.sh
 This script create backup every time when it's run for mysql databse that created in local host and dumped database in localhost.If you run this script inside EC2 then make sure you have install aws cli in EC2 (not configure only install) & crate one IAM role of S3 full access and attch to that EC2.
 
+## Daily_Mysql_Backup
+This take MYSQL backup and name formate is DDMMYYY_daily_bu.gzip. If backup is more then 7 then oldest one is deleted.
+### Daily Cron job
+0 23 * * * TZ=Australia/Sydney /home/preprodsyncezy/backup/db_backup_scripts/daily_backup.sh >> /home/preprodsyncezy/backup/daily_cron_log.log 2>&1 && echo "----------------------------" >> /home/preprodsyncezy/backup/daily_cron_log.log
+
+
+## Monthly_Mysql_Bakup.sh
+This take MYSQL backup and name formate is MMYYY_monthly_bu.gzip. If backup is more then 3 then oldest one is deleted.
+
+### Monthly Cron job
+0 23 28 * * TZ=Australia/Sydney /home/preprodsyncezy/backup/db_backup_scripts/monthly_backup.sh >> /home/preprodsyncezy/backup/db_backup_scripts/monthly_cron_log.log 2>&1 && echo "----------------------------" >> /home/preprodsyncezy/backup/db_backup_scripts/monthly_cron_log.log
+
 ## Site_Backup.sh
 Take your site backup and store it on S3.
 
