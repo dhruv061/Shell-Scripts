@@ -1,0 +1,11 @@
+#Command
+mongorestore \
+  --uri="<mongodb-url>" \
+  --db <new-db-name> \
+  <unzip_file_path>
+
+#Example
+mongorestore \
+  --uri="mongodb+srv://admin:VvgfhuywrvIoC1pz@luv-ludo.l5xfat.mongodb.net" \
+  --db luv-ludo \
+  /home/yudizsolutionsltd-dhruv/Pictures/ludo-lush
